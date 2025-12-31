@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Prism from "prismjs";
 import "prismjs/components/prism-javascript";
 import "@/assets/css/tomorrow.css";
@@ -210,8 +211,9 @@ const profile = {
               {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                  B.Tech IT Student 🎓 | Java & SQL Enthusiast 💻 | Passionate about
-                  building practical projects and solving logical problems ✨
+                  B.Tech IT Student 🎓 | Java & SQL Enthusiast 💻 | Passionate
+                  about building practical projects and solving logical problems
+                  ✨
                 </p>
               </div>
 
@@ -231,8 +233,8 @@ const profile = {
                 </a>
 
                 {/* Contact Button */}
-                <a
-                  href="/resume"
+                <Link
+                  to="/resume"
                   className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-gray-800 to-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                 >
                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
@@ -241,7 +243,7 @@ const profile = {
                       <i className="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12"></i>
                     </span>
                   </span>
-                </a>
+                </Link>
               </div>
 
               {/* Floating badges */}
@@ -269,11 +271,13 @@ const profile = {
                 {/* Animated gradient orbs */}
                 <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-blue-500/30 to-teal-400/30 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-br from-purple-500/30 to-pink-400/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
-                
+
                 {/* Stats cards */}
                 <div className="relative z-10 grid grid-cols-2 gap-4">
                   <div className="p-6 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105">
-                    <div className="text-3xl font-bold gradient-text">B.Tech</div>
+                    <div className="text-3xl font-bold gradient-text">
+                      B.Tech
+                    </div>
                     <div className="text-gray-400 text-sm mt-1">IT Student</div>
                   </div>
                   <div className="p-6 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-teal-500/50 transition-all duration-300 hover:scale-105">
@@ -282,10 +286,14 @@ const profile = {
                   </div>
                   <div className="p-6 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
                     <div className="text-3xl font-bold gradient-text">10+</div>
-                    <div className="text-gray-400 text-sm mt-1">Tech Skills</div>
+                    <div className="text-gray-400 text-sm mt-1">
+                      Tech Skills
+                    </div>
                   </div>
                   <div className="p-6 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-pink-500/50 transition-all duration-300 hover:scale-105">
-                    <div className="text-3xl font-bold gradient-text">AI/ML</div>
+                    <div className="text-3xl font-bold gradient-text">
+                      AI/ML
+                    </div>
                     <div className="text-gray-400 text-sm mt-1">Focused</div>
                   </div>
                 </div>
