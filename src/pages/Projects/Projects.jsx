@@ -8,6 +8,7 @@ import DrowsinessImg from "@/assets/images/projects/drowsiness.png";
 import HospitalImg from "@/assets/images/projects/hospital.jpg";
 import BrainImg from "@/assets/images/projects/brain.jpg";
 import ArrivalImg from "@/assets/images/projects/arriva.png";
+import HospitalDashboardImg from "@/assets/images/projects/hospital-dashboard.jpg";
 
 const projects = [
   {
@@ -46,6 +47,18 @@ const projects = [
     githubLink: "https://github.com/SrimathiKumar01/bistro_managementt",
     liveLink: "https://github.com/SrimathiKumar01/bistro_managementt",
   },
+   {
+    title: "Hospital Dashboard",
+    description:
+      "A comprehensive hospital dashboard UI design for efficient healthcare management. Features intuitive patient monitoring, appointment tracking, and medical data visualization. Designed for Smart India Hackathon with focus on usability and accessibility.",
+    technologies: ["UI/UX Design", "Dashboard", "Healthcare", "SIH"],
+    category: "Web Development",
+    filterCategory: "web",
+    link: HospitalDashboardImg,
+    color: "#f59e0b",
+    githubLink: "https://github.com/SrimathiKumar01/sih_Hospital-Dashboard-UI-Design.git",
+    liveLink: "https://github.com/SrimathiKumar01/sih_Hospital-Dashboard-UI-Design.git",
+  },
   {
     title: "Arrival",
     description:
@@ -58,6 +71,7 @@ const projects = [
     githubLink: "#",
     liveLink: "#",
   },
+  
 ];
 
 const categories = [
