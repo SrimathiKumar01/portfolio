@@ -254,9 +254,9 @@ const profile = {
                 </div> */}
               </div>
               <div className="hidden lg:block absolute right-10 top-20 animate-float">
-                <div className="px-4 py-2 rounded-lg bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 text-blue-400">
+                {/* <div className="px-4 py-2 rounded-lg bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 text-blue-400">
                   <i className="fas fa-code"></i>&nbsp;&nbsp;Clean Code
-                </div>
+                </div> */}
               </div>
               <div className="hidden lg:block absolute top-[17rem] left-[70%] transform -translate-x-1/2 animate-float">
                 <div className="px-4 py-2 rounded-lg bg-amber-500/10 backdrop-blur-sm border border-amber-500/20 text-amber-400">
@@ -292,7 +292,7 @@ const profile = {
                   </div>
                   <div className="p-6 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 hover:border-pink-500/50 transition-all duration-300 hover:scale-105">
                     <div className="text-3xl font-bold gradient-text">
-                      AI/ML
+                      Data Analyst
                     </div>
                     <div className="text-gray-400 text-sm mt-1">Focused</div>
                   </div>
