@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 import DrowsinessImg from "@/assets/images/projects/drowsiness.png";
 import HospitalImg from "@/assets/images/projects/hospital.jpg";
 import BrainImg from "@/assets/images/projects/brain.jpg";
-import ArrivalImg from "@/assets/images/projects/arriva.png";
+import DashBoardImg from "@/assets/images/projects/Dashboard.png";  
 
 const projects = [
   {
@@ -47,25 +47,13 @@ const projects = [
     liveLink: "https://github.com/SrimathiKumar01/bistro_managementt",
   },
   {
-    title: "Arrival",
-    description:
-      "A modern web application for seamless event or product arrivals. Showcases real-time updates, notifications, and user-friendly dashboards. Responsive design ensures accessibility across all devices.",
-    technologies: ["HTML", "CSS", "JavaScript", "Backend Integration"],
-    category: "Web Development",
-    filterCategory: "web",
-    link: ArrivalImg,
-    color: "#ed649e",
-    githubLink: "#",
-    liveLink: "#",
-  },
-  {
-    title: "Hospital Dashboard",
+    title: " SIH Hospital Dashboard",
     description:
       "A comprehensive hospital dashboard UI design for efficient healthcare management. Features intuitive patient monitoring, appointment tracking, and medical data visualization. Designed for Smart India Hackathon with focus on usability and accessibility.",
     technologies: ["UI/UX Design", "Dashboard", "Healthcare", "SIH"],
     category: "Web Development",
     filterCategory: "web",
-    link: HospitalImg,
+    link: DashBoardImg,
     color: "#f59e0b",
     githubLink: "https://github.com/SrimathiKumar01/sih_Hospital-Dashboard-UI-Design.git",
     liveLink: "https://github.com/SrimathiKumar01/sih_Hospital-Dashboard-UI-Design.git",

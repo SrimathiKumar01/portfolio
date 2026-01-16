@@ -212,8 +212,7 @@ const profile = {
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
                   B.Tech IT Student 🎓 | Java & SQL Enthusiast 💻 | Passionate
-                  about building practical projects and solving logical problems
-                  ✨
+                  about building practical projects and data analysis ✨
                 </p>
               </div>
 
