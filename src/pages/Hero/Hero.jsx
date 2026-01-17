@@ -137,8 +137,7 @@ const profile = {
     <>
       <main className="bg-[#020617] text-white min-h-screen">
         <section
-          className="hero min-h-screen flex items-center justify-center relative px-4 sm:px-6 lg:px-8 py-10 md:py-16 lg:py-0 hero-section-padding"
-          style={{ paddingTop: "var(--hero-padding-top, 0)" }}
+          className="hero min-h-screen flex items-center justify-center relative px-4 sm:px-6 lg:px-8 pt-32 sm:pt-36 md:pt-40 lg:pt-24 pb-10 md:pb-16 lg:pb-0"
         >
           <div className="absolute inset-0"></div>
 
@@ -156,18 +155,7 @@ const profile = {
           </div>
 
           {/* Main content container */}
-          <div
-            className="container mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10 py-8 md:py-10 lg:py-12 md:pt-28 xl:pt-28"
-            style={{
-              paddingTop:
-                window.innerWidth >= 1360 &&
-                window.innerWidth <= 1370 &&
-                window.innerHeight >= 760 &&
-                window.innerHeight <= 775
-                  ? "12rem"
-                  : "",
-            }}
-          >
+          <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10">
             {/* Left column - Text content */}
             <div className="w-full lg:w-1/2 mb-12 lg:mb-0 animate__animated animate__fadeInLeft relative">
               {/* Decorative blurs */}

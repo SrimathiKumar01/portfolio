@@ -88,7 +88,7 @@ export default function Projects() {
 
   return (
     <ReactLenis root options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}>
-      <main className="bg-slate-950 scroll-smooth min-h-screen pb-20">
+      <main className="bg-slate-950 scroll-smooth min-h-screen pb-20" >
         {/* Projects Header - Added pt-20 to account for fixed header */}
         <section className="min-h-[35vh] flex items-center justify-center relative overflow-hidden pt-24 pb-8">
           <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"></div>
@@ -143,8 +143,8 @@ export default function Projects() {
         </section>
 
         {/* Projects Cards */}
-        <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.map((project, i) => (
               <Card
                 key={`p_${project.title}`}
@@ -184,32 +184,25 @@ function Card({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: i * 0.1 }}
-      whileHover={{ y: -8, transition: { duration: 0.3 } }}
-      className="relative bg-zinc-900/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl border border-gray-800/50 flex flex-col h-full"
+      whileHover={{ y: -10, scale: 1.02, transition: { duration: 0.3 } }}
+      className="bg-black/40 backdrop-blur-sm rounded-xl overflow-hidden shadow-2xl flex flex-col h-full group"
+      style={{ 
+        border: `1px solid ${color}40`,
+        boxShadow: `0 0 15px ${color}15, 0 10px 40px rgba(0,0,0,0.5)`
+      }}
     >
-      {/* Corner decorations */}
-      <div className="absolute top-0 left-0 w-16 h-16 border-t-4 border-l-4 rounded-tl-2xl z-10" style={{ borderColor: color }} />
-      <div className="absolute top-0 right-0 w-16 h-16 border-t-4 border-r-4 rounded-tr-2xl z-10" style={{ borderColor: color }} />
-      <div className="absolute bottom-0 left-0 w-16 h-16 border-b-4 border-l-4 rounded-bl-2xl z-10" style={{ borderColor: color }} />
-      <div className="absolute bottom-0 right-0 w-16 h-16 border-b-4 border-r-4 rounded-br-2xl z-10" style={{ borderColor: color }} />
-      
       {/* Image section */}
-      <div className="relative h-80 overflow-hidden group">
+      <div className="relative h-56 overflow-hidden">
         <motion.img
           src={url}
           alt={title}
-          className="w-full h-full object-cover"
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.4 }}
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
 
         {/* Colored overlay on hover */}
-        <motion.div
-          className="absolute inset-0"
-          style={{ backgroundColor: color, mixBlendMode: "overlay" }}
-          initial={{ opacity: 0 }}
-          whileHover={{ opacity: 0.3 }}
-          transition={{ duration: 0.3 }}
+        <div
+          className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+          style={{ backgroundColor: color }}
         />
 
         {/* Category badge */}
@@ -227,30 +220,22 @@ function Card({
       </div>
 
       {/* Content section */}
-      <div className="p-10 flex flex-col flex-grow">
+      <div className="p-6 flex flex-col flex-grow">
         <div className="flex-grow">
-          <div className="flex items-center gap-3 mb-4">
-            <div
-              className="w-2 h-2 rounded-full animate-pulse"
-              style={{ backgroundColor: color }}
-            />
-            <div className="h-[1px] w-12" style={{ backgroundColor: color }} />
-          </div>
-
-          <h2 className="text-3xl font-bold text-white mb-5">
+          <h2 className="text-xl font-bold text-white mb-3">
             {title}
           </h2>
-          <p className="text-lg text-gray-400 leading-relaxed mb-5">
+          <p className="text-sm text-gray-300 leading-relaxed mb-4 line-clamp-3">
             {description}
           </p>
 
           {/* Technology tags */}
           {technologies && (
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2">
               {technologies.map((tech, index) => (
                 <span
                   key={index}
-                  className="px-4 py-2 text-base rounded-full bg-gray-800 text-gray-300 border border-gray-700">
+                  className="px-2.5 py-1 text-xs rounded-full bg-gray-800/60 text-gray-300 border border-gray-700/50">
                 >
                   {tech}
                 </span>
@@ -260,36 +245,39 @@ function Card({
         </div>
 
         {/* Links section */}
-        <div className="mt-8 pt-6 border-t border-gray-800">
-          <div className="flex items-center justify-center gap-8">
+        <div className="mt-5 pt-4 border-t border-gray-800/50">
+          <div className="flex items-center justify-center gap-4">
             {/* GitHub Link */}
             <motion.a
               href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-2"
-              whileHover={{ y: -3 }}
-              transition={{ type: "spring", stiffness: 400 }}
+              className="flex items-center gap-2 px-5 py-2 rounded-lg font-medium transition-all text-sm"
+              style={{ 
+                backgroundColor: `${color}30`,
+                color: color,
+                border: `1px solid ${color}50`
+              }}
+              whileHover={{ 
+                backgroundColor: `${color}40`,
+                scale: 1.05,
+                transition: { duration: 0.2 } 
+              }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="18"
+                height="18"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke={color}
+                stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               >
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
               </svg>
-              <span
-                className="text-base font-medium"
-                style={{ color }}
-              >
-                GitHub
-              </span>
+              <span>GitHub</span>
             </motion.a>
 
             {/* Live Link */}
@@ -297,17 +285,25 @@ function Card({
               href={liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-2"
-              whileHover={{ y: -3 }}
-              transition={{ type: "spring", stiffness: 400 }}
+              className="flex items-center gap-2 px-5 py-2 rounded-lg font-medium transition-all text-sm"
+              style={{ 
+                backgroundColor: `${color}30`,
+                color: color,
+                border: `1px solid ${color}50`
+              }}
+              whileHover={{ 
+                backgroundColor: `${color}40`,
+                scale: 1.05,
+                transition: { duration: 0.2 } 
+              }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="18"
+                height="18"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke={color}
+                stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -316,12 +312,7 @@ function Card({
                 <line x1="2" y1="12" x2="22" y2="12"></line>
                 <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
               </svg>
-              <span
-                className="text-base font-medium"
-                style={{ color }}
-              >
-                Demo
-              </span>
+              <span>Demo</span>
             </motion.a>
           </div>
         </div>
