@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 import DrowsinessImg from "@/assets/images/projects/drowsiness.png";
 import HospitalImg from "@/assets/images/projects/hospital.jpg";
 import BrainImg from "@/assets/images/projects/brain.jpg";
-import DashBoardImg from "@/assets/images/projects/Dashboard.png";  
+import DashBoardImg from "@/assets/images/projects/DashBoard.png";  
 
 const projects = [
   {
