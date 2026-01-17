@@ -8,6 +8,7 @@ import DrowsinessImg from "@/assets/images/projects/drowsiness.png";
 import HospitalImg from "@/assets/images/projects/hospital.jpg";
 import BrainImg from "@/assets/images/projects/brain.jpg";
 import DashBoardImg from "@/assets/images/projects/DashBoard.png";  
+import BistroImg from "@/assets/images/projects/bistro.jpg";
 
 const projects = [
   {
@@ -43,8 +44,20 @@ const projects = [
     filterCategory: "ai",
     link: BrainImg,
     color: "#10b981",
-    githubLink: "https://github.com/SrimathiKumar01/bistro_managementt",
-    liveLink: "https://github.com/SrimathiKumar01/bistro_managementt",
+    githubLink: "https://github.com/SrimathiKumar01/Brain-Tumor-Detection",
+    liveLink: "https://github.com/SrimathiKumar01/Brain-Tumor-Detection",
+  },
+  {
+    title: "Bistro_Management",
+    description:
+      "A restaurant management system that streamlines order handling, menu management, and billing workflows. Built to simplify day-to-day operations with a clean, easy-to-use interface.",
+    technologies: ["Java", "SQL", "Database"],
+    category: "Web Application",
+    filterCategory: "web",
+    link: BistroImg,
+    color: "#22c55e",
+    githubLink: "https://github.com/SrimathiKumar01/Bistro-Management",
+    liveLink: "https://github.com/SrimathiKumar01/Bistro-Management",
   },
   {
     title: " SIH Hospital Dashboard",
